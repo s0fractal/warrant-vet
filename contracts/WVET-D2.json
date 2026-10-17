@@ -1,0 +1,36 @@
+{
+  "id": "WVET-D2",
+  "profile": "warrant-vet.contract.v1",
+  "adr": "docs/adr/0001-the-subject-is-a-descriptor-of-exact-bytes.md",
+  "statement": "A descriptor MUST be built from the lockfile's own digest: a registry entry without a digest and a git or path dependency MUST be reported `UNPINNED`, a workspace member `LOCAL`, and a name or version that is not ASCII MUST refuse the lockfile.",
+  "witnesses": [
+    "test_git_dependency_is_unpinned",
+    "test_non_ascii_name_refuses",
+    "test_npm_lockfile_entries",
+    "test_registry_entry_without_checksum_is_unpinned",
+    "test_workspace_member_is_local"
+  ],
+  "mutants": [
+    "ascii-unchecked",
+    "missing-checksum-local"
+  ],
+  "decisions": [
+    {
+      "date": "2026-10-17",
+      "because": "Initial statement.",
+      "statement_sha256": "d19ff879066909e556ece0d65709c83b529a33e83566cf2e130cf3db5a072b56",
+      "previous_statement_sha256": null
+    },
+    {
+      "date": "2026-10-17",
+      "because": "First red of the suite: a lockfile whose registry entry was named 'libс' (Cyrillic с) was read without complaint; ASCII was checked only when the descriptor was encoded, so `check` would have crashed with an unhandled exception rather than refusing. The check moved to descriptor construction, then to every lockfile entry once the statement was read again: a workspace member named 'demо-app' still passed.",
+      "counterexample": {
+        "witness": "test_non_ascii_name_refuses",
+        "observed": "LockfileError not raised (registry entry, then workspace member)",
+        "expected": "the lockfile is refused"
+      },
+      "statement_sha256": "d19ff879066909e556ece0d65709c83b529a33e83566cf2e130cf3db5a072b56",
+      "previous_statement_sha256": "d19ff879066909e556ece0d65709c83b529a33e83566cf2e130cf3db5a072b56"
+    }
+  ]
+}

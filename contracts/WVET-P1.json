@@ -1,0 +1,20 @@
+{
+  "id": "WVET-P1",
+  "profile": "warrant-vet.contract.v1",
+  "adr": "docs/adr/0003-policy-and-verdicts.md",
+  "statement": "Only `accept` and `reject` records whose subject is the artifact's descriptor and whose `under` contains the policy's criteria blob MUST count.",
+  "witnesses": [
+    "test_other_criteria_does_not_count"
+  ],
+  "mutants": [
+    "criteria-ignored"
+  ],
+  "decisions": [
+    {
+      "date": "2026-10-17",
+      "because": "Initial statement.",
+      "statement_sha256": "b2b0e3d56ef8513a05522ab74e76e0043e3d62a20d2cb2f870114dbe52d13321",
+      "previous_statement_sha256": null
+    }
+  ]
+}

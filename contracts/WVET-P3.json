@@ -1,0 +1,23 @@
+{
+  "id": "WVET-P3",
+  "profile": "warrant-vet.contract.v1",
+  "adr": "docs/adr/0003-policy-and-verdicts.md",
+  "statement": "An artifact MUST be `ADMITTED` only when at least `min_accepts` distinct counted reviewers have an active `accept`; when `reviewers` is given, only those reviewers count.",
+  "witnesses": [
+    "test_demo_verdicts",
+    "test_min_accepts_counts_distinct_reviewers",
+    "test_reviewer_allowlist"
+  ],
+  "mutants": [
+    "not-distinct",
+    "allowlist-ignored"
+  ],
+  "decisions": [
+    {
+      "date": "2026-10-17",
+      "because": "Initial statement.",
+      "statement_sha256": "90309d333f0c0bef45ce2aafcfa6694871c2006d2b18a6578c3b4a22048033f3",
+      "previous_statement_sha256": null
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+{
+  "criteria": "safe-to-deploy",
+  "min_accepts": 1,
+  "warrant_vet": "0"
+}

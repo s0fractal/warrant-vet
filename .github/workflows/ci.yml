@@ -1,0 +1,19 @@
+name: ci
+on:
+  pull_request:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  local-ci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install the reader's verifier (pinned)
+        run: pip install warrant-verify==0.11.0
+      - name: Demo, contracts, counter-vectors, mutants
+        run: sh scripts/local-ci.sh

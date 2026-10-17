@@ -1,0 +1,32 @@
+{
+  "body": {
+    "actor": {
+      "id": "alice@demo.test"
+    },
+    "because": [
+      {
+        "kind": "prose",
+        "text": "DEMO review, not an actual audit: no unsafe outside the vetted SIMD paths"
+      }
+    ],
+    "decision": "accept",
+    "evidence": [],
+    "prior": [],
+    "subject": {
+      "hash": "0f9719203fee8f05a0da130e79a1dabfa827e16681d300b424271aa9b36cbd18",
+      "note": "cargo aho-corasick 1.1.5"
+    },
+    "ts": 1792195202,
+    "under": [
+      "682dc2cb687bcf8a219e487f933ad50e4ef774b5ff40880acdc0ea9e328a466a"
+    ],
+    "warrant": "0.2"
+  },
+  "sigs": [
+    {
+      "actor": "alice@demo.test",
+      "key": "df374fba4e88f9b3d77e312b22f145545815709327714a2fc11459f819349d20",
+      "sig": "5e230f5766261fbcc4d1c5a522abedb54cea86407d23d9b462e3625b11773c258648df14c249609ffacbe551f78e8263487a606b1e3598b9ee6b6a373ecf2407"
+    }
+  ]
+}

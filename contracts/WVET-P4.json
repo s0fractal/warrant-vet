@@ -1,0 +1,23 @@
+{
+  "id": "WVET-P4",
+  "profile": "warrant-vet.contract.v1",
+  "adr": "docs/adr/0003-policy-and-verdicts.md",
+  "statement": "A review MUST stop counting when its own actor files a `supersede` naming it, and only then.",
+  "witnesses": [
+    "test_demo_verdicts",
+    "test_withdrawal_by_another_actor_withdraws_nothing",
+    "test_withdrawn_review_does_not_count"
+  ],
+  "mutants": [
+    "withdraw-by-anyone",
+    "no-withdraw"
+  ],
+  "decisions": [
+    {
+      "date": "2026-10-17",
+      "because": "Initial statement.",
+      "statement_sha256": "792fc0decc6f265c7c947f5368ecc360df72d61195dbf6278967ed65552c258e",
+      "previous_statement_sha256": null
+    }
+  ]
+}

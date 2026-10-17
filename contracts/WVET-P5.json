@@ -1,0 +1,22 @@
+{
+  "id": "WVET-P5",
+  "profile": "warrant-vet.contract.v1",
+  "adr": "docs/adr/0003-policy-and-verdicts.md",
+  "statement": "`check` MUST exit 0 only when every lockfile entry is `ADMITTED` or `LOCAL`, and MUST refuse a policy with unknown members, an empty criteria, or `min_accepts` below 1.",
+  "witnesses": [
+    "test_exit_zero_only_when_all_admitted",
+    "test_policy_refuses_malformed"
+  ],
+  "mutants": [
+    "lenient-exit",
+    "policy-min-zero"
+  ],
+  "decisions": [
+    {
+      "date": "2026-10-17",
+      "because": "Initial statement.",
+      "statement_sha256": "64c453b18bb0aaf888ba1c780f11ad865c90f2e27edd8e883c03b72a63f53952",
+      "previous_statement_sha256": null
+    }
+  ]
+}

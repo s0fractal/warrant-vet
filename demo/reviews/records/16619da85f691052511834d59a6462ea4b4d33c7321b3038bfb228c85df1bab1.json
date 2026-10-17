@@ -1,0 +1,34 @@
+{
+  "body": {
+    "actor": {
+      "id": "alice@demo.test"
+    },
+    "because": [
+      {
+        "kind": "prose",
+        "text": "DEMO review, not an actual audit: withdrawn: reviewed the wrong feature set"
+      }
+    ],
+    "decision": "supersede",
+    "evidence": [],
+    "prior": [
+      "2544114ce27834f96bcfd1014d09445bb9231e65948b2370a76a8484454e8e51"
+    ],
+    "subject": {
+      "hash": "2544114ce27834f96bcfd1014d09445bb9231e65948b2370a76a8484454e8e51",
+      "note": "cargo serde 1.0.229"
+    },
+    "ts": 1792195206,
+    "under": [
+      "682dc2cb687bcf8a219e487f933ad50e4ef774b5ff40880acdc0ea9e328a466a"
+    ],
+    "warrant": "0.2"
+  },
+  "sigs": [
+    {
+      "actor": "alice@demo.test",
+      "key": "df374fba4e88f9b3d77e312b22f145545815709327714a2fc11459f819349d20",
+      "sig": "f5e5cee670f491993b3e990c60c5b92d8e7c802ed580bc152ae9784a327f3315e53d0503d9048d0e5f1422a7a52ece6341b4f3f12b47f0b6b3becb7511e65809"
+    }
+  ]
+}

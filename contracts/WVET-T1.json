@@ -1,0 +1,20 @@
+{
+  "id": "WVET-T1",
+  "profile": "warrant-vet.contract.v1",
+  "adr": "docs/adr/0002-trust-and-binding-come-from-the-reader.md",
+  "statement": "A check MUST require a trust config supplied by the reader; reviewers are bound to keys only through it.",
+  "witnesses": [
+    "test_without_reader_trust_refuses"
+  ],
+  "mutants": [
+    "no-trust-required"
+  ],
+  "decisions": [
+    {
+      "date": "2026-10-17",
+      "because": "Initial statement.",
+      "statement_sha256": "94c310e727d78c449d69793a6c09ba79fbbe57b7657553ae2e677583301f0931",
+      "previous_statement_sha256": null
+    }
+  ]
+}

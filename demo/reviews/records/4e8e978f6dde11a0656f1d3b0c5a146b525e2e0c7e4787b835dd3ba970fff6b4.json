@@ -1,0 +1,32 @@
+{
+  "body": {
+    "actor": {
+      "id": "alice@demo.test"
+    },
+    "because": [
+      {
+        "kind": "prose",
+        "text": "DEMO review, not an actual audit: small, no build script"
+      }
+    ],
+    "decision": "accept",
+    "evidence": [],
+    "prior": [],
+    "subject": {
+      "hash": "9e73c62cc9a3a75f85dd3a47d3f93fed790c70c461b44e521b23a9e68423e789",
+      "note": "cargo itoa 1.0.18"
+    },
+    "ts": 1792195203,
+    "under": [
+      "682dc2cb687bcf8a219e487f933ad50e4ef774b5ff40880acdc0ea9e328a466a"
+    ],
+    "warrant": "0.2"
+  },
+  "sigs": [
+    {
+      "actor": "alice@demo.test",
+      "key": "df374fba4e88f9b3d77e312b22f145545815709327714a2fc11459f819349d20",
+      "sig": "bcb4de9ef76277b4070b15d9803af3ccfa2f1e54ed2ec029407bdae69d249b2c42b857eb88af3651200a1aecfc3dbe916c568f162c7c6848b569149c715f890a"
+    }
+  ]
+}

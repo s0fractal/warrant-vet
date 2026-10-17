@@ -1,0 +1,130 @@
+[
+ {
+  "id": "digest-ignored",
+  "statement": "WVET-D1",
+  "file": "warrant_vet/descriptor.py",
+  "find": "    return hashlib.sha256(encode(desc)).hexdigest()",
+  "replace": "    return hashlib.sha256(encode({k: v for k, v in desc.items() if k != \"digest\"})).hexdigest()",
+  "why": "other bytes under the same name and version keep the review"
+ },
+ {
+  "id": "version-ignored",
+  "statement": "WVET-D1",
+  "file": "warrant_vet/descriptor.py",
+  "find": "    return hashlib.sha256(encode(desc)).hexdigest()",
+  "replace": "    return hashlib.sha256(encode({k: v for k, v in desc.items() if k != \"version\"})).hexdigest()",
+  "why": "a review of one version counts for another"
+ },
+ {
+  "id": "ascii-unchecked",
+  "statement": "WVET-D2",
+  "file": "warrant_vet/descriptor.py",
+  "find": "        if not (isinstance(e.name, str) and e.name.isascii() and isinstance(e.version, str) and e.version.isascii()):",
+  "replace": "        if False:",
+  "why": "a look-alike name in a workspace member passes"
+ },
+ {
+  "id": "missing-checksum-local",
+  "statement": "WVET-D2",
+  "file": "warrant_vet/descriptor.py",
+  "find": "            out.append(Entry(\"cargo\", name, version, status=\"UNPINNED\", why=\"registry package without a sha256 checksum\"))",
+  "replace": "            out.append(Entry(\"cargo\", name, version, status=\"LOCAL\", why=\"registry package without a sha256 checksum\"))",
+  "why": "a registry package with no digest is waved through"
+ },
+ {
+  "id": "no-trust-required",
+  "statement": "WVET-T1",
+  "file": "warrant_vet/vet.py",
+  "find": "    if trust_config is None or not Path(trust_config).is_file():",
+  "replace": "    if False:",
+  "why": "a check runs without the reader's trust"
+ },
+ {
+  "id": "no-require-bound",
+  "statement": "WVET-T2",
+  "file": "warrant_vet/wcli.py",
+  "find": "\"--trust-config\", str(trust_config), \"--require-bound\", \"--json\"]",
+  "replace": "\"--trust-config\", str(trust_config), \"--json\"]",
+  "why": "a review signed with Mallory's key counts as alice's"
+ },
+ {
+  "id": "errors-counted",
+  "statement": "WVET-T2",
+  "file": "warrant_vet/vet.py",
+  "find": "    valid = {w: r for w, r in records.items() if r is not None and w not in in_error}",
+  "replace": "    valid = {w: r for w, r in records.items() if r is not None}",
+  "why": "records warrant found in error still count"
+ },
+ {
+  "id": "store-level-ignored",
+  "statement": "WVET-T2",
+  "file": "warrant_vet/vet.py",
+  "find": "    if store_level:",
+  "replace": "    if False:",
+  "why": "an unusable trust config yields verdicts instead of a refusal"
+ },
+ {
+  "id": "criteria-ignored",
+  "statement": "WVET-P1",
+  "file": "warrant_vet/vet.py",
+  "find": "and criteria_hash in b[\"under\"] and",
+  "replace": "and",
+  "why": "a review under another standard counts"
+ },
+ {
+  "id": "accepts-outvote",
+  "statement": "WVET-P2",
+  "file": "warrant_vet/vet.py",
+  "find": "        if rejects:",
+  "replace": "        if rejects and len(rejects) >= len(accepts):",
+  "why": "accepts outvote a finding"
+ },
+ {
+  "id": "not-distinct",
+  "statement": "WVET-P3",
+  "file": "warrant_vet/vet.py",
+  "find": "        accepts = sorted({b[\"actor\"][\"id\"] for b in reviews if b[\"decision\"] == \"accept\"})",
+  "replace": "        accepts = [b[\"actor\"][\"id\"] for b in reviews if b[\"decision\"] == \"accept\"]",
+  "why": "one reviewer twice is two reviewers"
+ },
+ {
+  "id": "allowlist-ignored",
+  "statement": "WVET-P3",
+  "file": "warrant_vet/vet.py",
+  "find": "if allowed is None or b[\"actor\"][\"id\"] in allowed]",
+  "replace": "]",
+  "why": "reviewers outside the policy count"
+ },
+ {
+  "id": "withdraw-by-anyone",
+  "statement": "WVET-P4",
+  "file": "warrant_vet/vet.py",
+  "find": "                 if p in valid and valid[p][\"body\"][\"actor\"][\"id\"] == r[\"body\"][\"actor\"][\"id\"]}",
+  "replace": "                 if p in valid}",
+  "why": "anyone can retract someone else's review"
+ },
+ {
+  "id": "no-withdraw",
+  "statement": "WVET-P4",
+  "file": "warrant_vet/vet.py",
+  "find": " and w not in withdrawn:",
+  "replace": ":",
+  "why": "a withdrawn review still counts"
+ },
+ {
+  "id": "lenient-exit",
+  "statement": "WVET-P5",
+  "file": "warrant_vet/__main__.py",
+  "find": "    return 0 if all(v.status in (\"ADMITTED\", \"LOCAL\") for v in verdicts) else 1",
+  "replace": "    return 0 if all(v.status in (\"ADMITTED\", \"LOCAL\", \"UNPINNED\") for v in verdicts) else 1",
+  "why": "an unpinned git dependency passes CI"
+ },
+ {
+  "id": "policy-min-zero",
+  "statement": "WVET-P5",
+  "file": "warrant_vet/vet.py",
+  "find": "    if not (isinstance(m, int) and not isinstance(m, bool) and m >= 1):",
+  "replace": "    if not (isinstance(m, int) and not isinstance(m, bool) and m >= 0):",
+  "why": "min_accepts 0 admits everything"
+ }
+]

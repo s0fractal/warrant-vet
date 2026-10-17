@@ -1,0 +1,26 @@
+{
+  "id": "WVET-T2",
+  "profile": "warrant-vet.contract.v1",
+  "adr": "docs/adr/0002-trust-and-binding-come-from-the-reader.md",
+  "statement": "The reader's warrant MUST verify the review store at settlement grade with the required-binding option; a record it reports with an `ERR` MUST NOT count, a store-level `ERR` or a missing report MUST refuse the run, and warnings MUST NOT change a verdict.",
+  "witnesses": [
+    "test_broken_trust_config_refuses",
+    "test_one_bad_record_does_not_silence_the_store",
+    "test_review_signed_with_another_key_is_set_aside",
+    "test_reviewer_unknown_to_the_reader_is_set_aside",
+    "test_unavailable_verifier_refuses"
+  ],
+  "mutants": [
+    "no-require-bound",
+    "errors-counted",
+    "store-level-ignored"
+  ],
+  "decisions": [
+    {
+      "date": "2026-10-17",
+      "because": "Initial statement.",
+      "statement_sha256": "452c86c645b955412ff22bc3c3d03afae89c47cbce58d9567f1b12bbfddf03ee",
+      "previous_statement_sha256": null
+    }
+  ]
+}

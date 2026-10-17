@@ -1,0 +1,23 @@
+{
+  "id": "WVET-D1",
+  "profile": "warrant-vet.contract.v1",
+  "adr": "docs/adr/0001-the-subject-is-a-descriptor-of-exact-bytes.md",
+  "statement": "A review's subject MUST be the SHA-256 of the canonical descriptor `{\"profile\",\"ecosystem\",\"name\",\"version\",\"digest\"}` whose members are ASCII strings; a review of any other descriptor, including the same name and version with another digest, MUST NOT count for an artifact.",
+  "witnesses": [
+    "test_changed_checksum_unreviews",
+    "test_review_of_another_version_does_not_count",
+    "test_subject_hash_is_pinned"
+  ],
+  "mutants": [
+    "digest-ignored",
+    "version-ignored"
+  ],
+  "decisions": [
+    {
+      "date": "2026-10-17",
+      "because": "Initial statement.",
+      "statement_sha256": "086839f4240f9acc623d75fd850f46dc2efc6d69889d83607fee9cf283aba137",
+      "previous_statement_sha256": null
+    }
+  ]
+}

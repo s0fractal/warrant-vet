@@ -1,0 +1,32 @@
+{
+  "body": {
+    "actor": {
+      "id": "bob@demo.test"
+    },
+    "because": [
+      {
+        "kind": "prose",
+        "text": "DEMO review, not an actual audit: ran the test suite against our usage"
+      }
+    ],
+    "decision": "accept",
+    "evidence": [],
+    "prior": [],
+    "subject": {
+      "hash": "762c03b0d63b13c3b957a57031cce8138c2516671885391106f3e9e7d360433c",
+      "note": "cargo memchr 2.8.3"
+    },
+    "ts": 1792195201,
+    "under": [
+      "682dc2cb687bcf8a219e487f933ad50e4ef774b5ff40880acdc0ea9e328a466a"
+    ],
+    "warrant": "0.2"
+  },
+  "sigs": [
+    {
+      "actor": "bob@demo.test",
+      "key": "62a18c28a9aec166a42256f751d3b002e715c8041348416c33d2d5c87a7a24bb",
+      "sig": "fb59e5b8a4f8a6b07ee7fe7a9247ea843323c6825aaca282d36c65e2867cbb2b823d65baf8107ff0fb937d3a1847de6afbbb49414c123a6bea76d6a4a3857b08"
+    }
+  ]
+}

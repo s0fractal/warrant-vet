@@ -1,0 +1,32 @@
+{
+  "body": {
+    "actor": {
+      "id": "alice@demo.test"
+    },
+    "because": [
+      {
+        "kind": "prose",
+        "text": "DEMO review, not an actual audit: accepted, then withdrawn below"
+      }
+    ],
+    "decision": "accept",
+    "evidence": [],
+    "prior": [],
+    "subject": {
+      "hash": "1c0b727c15d313644a8df0d3d244fc3329f0ac16f11696d49ba7395832d64c4e",
+      "note": "cargo serde 1.0.229"
+    },
+    "ts": 1792195205,
+    "under": [
+      "682dc2cb687bcf8a219e487f933ad50e4ef774b5ff40880acdc0ea9e328a466a"
+    ],
+    "warrant": "0.2"
+  },
+  "sigs": [
+    {
+      "actor": "alice@demo.test",
+      "key": "df374fba4e88f9b3d77e312b22f145545815709327714a2fc11459f819349d20",
+      "sig": "49c35cd6c9c28d9834b9490c6dbd008e4b271fcd7df3a03795f79d14dc81bd48357244c721df45c33dde801fc2e72adddfd48340579f19fb75e7f0bb69d09f0c"
+    }
+  ]
+}

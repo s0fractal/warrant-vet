@@ -1,0 +1,32 @@
+{
+  "body": {
+    "actor": {
+      "id": "alice@demo.test"
+    },
+    "because": [
+      {
+        "kind": "prose",
+        "text": "DEMO review, not an actual audit: read the diff since the last reviewed version"
+      }
+    ],
+    "decision": "accept",
+    "evidence": [],
+    "prior": [],
+    "subject": {
+      "hash": "762c03b0d63b13c3b957a57031cce8138c2516671885391106f3e9e7d360433c",
+      "note": "cargo memchr 2.8.3"
+    },
+    "ts": 1792195200,
+    "under": [
+      "682dc2cb687bcf8a219e487f933ad50e4ef774b5ff40880acdc0ea9e328a466a"
+    ],
+    "warrant": "0.2"
+  },
+  "sigs": [
+    {
+      "actor": "alice@demo.test",
+      "key": "df374fba4e88f9b3d77e312b22f145545815709327714a2fc11459f819349d20",
+      "sig": "7f4d8ee47a61817746423e13154a5b426d693827558b9315def65cd98365185021167eb154d40af9052e59e4679e33b290a229323c62cf2799bd9f19a5e33c02"
+    }
+  ]
+}

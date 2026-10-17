@@ -1,0 +1,21 @@
+{
+  "id": "WVET-P2",
+  "profile": "warrant-vet.contract.v1",
+  "adr": "docs/adr/0003-policy-and-verdicts.md",
+  "statement": "An active `reject` by a counted reviewer MUST make the artifact `REJECTED`, whatever the accepts.",
+  "witnesses": [
+    "test_demo_verdicts",
+    "test_reject_vetoes_accepts"
+  ],
+  "mutants": [
+    "accepts-outvote"
+  ],
+  "decisions": [
+    {
+      "date": "2026-10-17",
+      "because": "Initial statement.",
+      "statement_sha256": "f9cac525e64b954c918c2b898985af46591311ffc9fe8b9d3a5e7efde42a43ce",
+      "previous_statement_sha256": null
+    }
+  ]
+}

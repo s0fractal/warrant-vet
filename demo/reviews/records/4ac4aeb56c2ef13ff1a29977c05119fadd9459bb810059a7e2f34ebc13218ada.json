@@ -1,0 +1,32 @@
+{
+  "body": {
+    "actor": {
+      "id": "bob@demo.test"
+    },
+    "because": [
+      {
+        "kind": "prose",
+        "text": "DEMO review, not an actual audit: pretend finding, to show a veto"
+      }
+    ],
+    "decision": "reject",
+    "evidence": [],
+    "prior": [],
+    "subject": {
+      "hash": "fd4fa992cbcb4dbbc032fcb534a5a50f90917fdfc6ce365bd952347621f76834",
+      "note": "cargo regex 1.13.1"
+    },
+    "ts": 1792195204,
+    "under": [
+      "682dc2cb687bcf8a219e487f933ad50e4ef774b5ff40880acdc0ea9e328a466a"
+    ],
+    "warrant": "0.2"
+  },
+  "sigs": [
+    {
+      "actor": "bob@demo.test",
+      "key": "62a18c28a9aec166a42256f751d3b002e715c8041348416c33d2d5c87a7a24bb",
+      "sig": "9a26dba906aa528fae716f0d8c9dd7cb852e3e3d1be2803690c3d7a7832f4c3808c2707c5204596cf97dc7c468f9b17634276c1a16a13938d75ef4aada82c707"
+    }
+  ]
+}

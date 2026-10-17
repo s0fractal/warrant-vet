@@ -1,0 +1,10 @@
+{
+  "actors": {
+    "alice@demo.test": [
+      "df374fba4e88f9b3d77e312b22f145545815709327714a2fc11459f819349d20"
+    ],
+    "bob@demo.test": [
+      "62a18c28a9aec166a42256f751d3b002e715c8041348416c33d2d5c87a7a24bb"
+    ]
+  }
+}
